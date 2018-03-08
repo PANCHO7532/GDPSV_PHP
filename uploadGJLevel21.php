@@ -9,7 +9,7 @@ include 'inc/config.inc.php';
 include 'inc/funct.inc.php';
 
 //Collecting IP of client...
-$ip = $_SERVER['REMOTE_ADDR'];
+$reqip = $_SERVER['REMOTE_ADDR'];
 
 //Checking if SQL its enabled from configuration file...
 if(is_numeric AND $sqlmode == '1') {
@@ -98,7 +98,7 @@ if(!isset($_POST['udid']) AND !empty($_POST['udid'])) {
 			//Begin level writing...
 			$levelfile = $db_fol."/levels/lvl_".$value.".php";
 			$levelstagew = fopen($levelfile, "a");
-			fwrite($levelstagew, "<?php\r\n$"."lvlID = '$value';\r\n$"."lvlname = '$levelName';\r\n$"."desc = '$levelDesc';\r\n$"."string = '$levelString';\r\n$"."lvlInfo = '$levelInfo';\r\n$"."extraStr = '$extraString';\r\n$."."levelver = '$levelVersion';\r\n$"."levelLen = '$levelLength';\r\n$"."audioTrack = '$audioTrack';\r\n$"."auto = '$auto';\r\n$"."password = '$password';\r\n$"."original = $original;\r\n$."."twoPlayer = '$twoPlayer';\r\n$"."songID = '$songID';\r\n$"."objects = '$objects';\r\n$"."coins = '$coins';\r\n$"."requestedStars = '$requestedStars';\r\n$"."unlisted = '$unlisted';\r\n$"."ldm = '$ldm';\r\n$"."lvlauthor = '$userName';\r\n$"."ownerAccID = '0';\r\n$"."extID = '$udid';\r\n?>");
+			fwrite($levelstagew, "<?php\r\n$"."lvlID = '$value';\r\n$"."lvlname = '$levelName';\r\n$"."desc = '$levelDesc';\r\n$"."string = '$levelString';\r\n$"."lvlInfo = '$levelInfo';\r\n$"."extraStr = '$extraString';\r\n$."."levelver = '$levelVersion';\r\n$"."levelLen = '$levelLength';\r\n$"."audioTrack = '$audioTrack';\r\n$"."auto = '$auto';\r\n$"."password = '$password';\r\n$"."original = $original;\r\n$."."twoPlayer = '$twoPlayer';\r\n$"."songID = '$songID';\r\n$"."objects = '$objects';\r\n$"."coins = '$coins';\r\n$"."requestedStars = '$requestedStars';\r\n$"."unlisted = '$unlisted';\r\n$"."ldm = '$ldm';\r\n$"."lvlauthor = '$userName';\r\n$"."ownerAccID = '0';\r\n$"."extID = '$udid';\r\n$"."requestIP = '$reqip';\r\n?>");
 			fclose($levelstagew);
 			//ENDING
 			echo $value;
@@ -120,7 +120,7 @@ if(!isset($_POST['udid']) AND !empty($_POST['udid'])) {
 			//Begin level writing...
 			$levelfile = $db_fol."/levels/lvl_".$value.".php";
 			$levelstagew = fopen($levelfile, "a");
-			fwrite($levelstagew, "<?php\r\n$"."lvlID = '$value';\r\n$"."lvlname = '$levelName';\r\n$"."desc = '$levelDesc';\r\n$"."string = '$levelString';\r\n$"."lvlInfo = '$levelInfo';\r\n$"."extraStr = '$extraString';\r\n$."."levelver = '$levelVersion';\r\n$"."levelLen = '$levelLength';\r\n$"."audioTrack = '$audioTrack';\r\n$"."auto = '$auto';\r\n$"."password = '$password';\r\n$"."original = $original;\r\n$."."twoPlayer = '$twoPlayer';\r\n$"."songID = '$songID';\r\n$"."objects = '$objects';\r\n$"."coins = '$coins';\r\n$"."requestedStars = '$requestedStars';\r\n$"."unlisted = '$unlisted';\r\n$"."ldm = '$ldm';\r\n$"."lvlauthor = '$userName';\r\n$"."ownerAccID = '0';\r\n$"."extID = '$udid';\r\n?>");
+			fwrite($levelstagew, "<?php\r\n$"."lvlID = '$value';\r\n$"."lvlname = '$levelName';\r\n$"."desc = '$levelDesc';\r\n$"."string = '$levelString';\r\n$"."lvlInfo = '$levelInfo';\r\n$"."extraStr = '$extraString';\r\n$."."levelver = '$levelVersion';\r\n$"."levelLen = '$levelLength';\r\n$"."audioTrack = '$audioTrack';\r\n$"."auto = '$auto';\r\n$"."password = '$password';\r\n$"."original = $original;\r\n$."."twoPlayer = '$twoPlayer';\r\n$"."songID = '$songID';\r\n$"."objects = '$objects';\r\n$"."coins = '$coins';\r\n$"."requestedStars = '$requestedStars';\r\n$"."unlisted = '$unlisted';\r\n$"."ldm = '$ldm';\r\n$"."lvlauthor = '$userName';\r\n$"."ownerAccID = '0';\r\n$"."extID = '$udid';\r\n$"."requestIP = '$reqip';\r\n?>");
 			fclose($levelstagew);
 			//ENDING
 			echo $value;
@@ -196,7 +196,7 @@ if($username_reg == $userName AND $decodedInternalpsw == $gjp) {
 	//Begin level writing...
 	$levelfile = $db_fol."/levels/lvl_".$value.".php";
 	$levelstagew = fopen($levelfile, "a");
-	fwrite($levelstagew, "<?php\r\n$"."lvlID = '$value';\r\n$"."lvlname = '$levelName';\r\n$"."desc = '$levelDesc';\r\n$"."string = '$levelString';\r\n$"."lvlInfo = '$levelInfo';\r\n$"."extraStr = '$extraString';\r\n$."."levelver = '$levelVersion';\r\n$"."levelLen = '$levelLength';\r\n$"."audioTrack = '$audioTrack';\r\n$"."auto = '$auto';\r\n$"."password = '$password';\r\n$"."original = $original;\r\n$."."twoPlayer = '$twoPlayer';\r\n$"."songID = '$songID';\r\n$"."objects = '$objects';\r\n$"."coins = '$coins';\r\n$"."requestedStars = '$requestedStars';\r\n$"."unlisted = '$unlisted';\r\n$"."ldm = '$ldm';\r\n$"."lvlauthor = '$userName';\r\n$"."ownerAccID = '$accountID';\r\n?>");
+	fwrite($levelstagew, "<?php\r\n$"."lvlID = '$value';\r\n$"."lvlname = '$levelName';\r\n$"."desc = '$levelDesc';\r\n$"."string = '$levelString';\r\n$"."lvlInfo = '$levelInfo';\r\n$"."extraStr = '$extraString';\r\n$."."levelver = '$levelVersion';\r\n$"."levelLen = '$levelLength';\r\n$"."audioTrack = '$audioTrack';\r\n$"."auto = '$auto';\r\n$"."password = '$password';\r\n$"."original = $original;\r\n$."."twoPlayer = '$twoPlayer';\r\n$"."songID = '$songID';\r\n$"."objects = '$objects';\r\n$"."coins = '$coins';\r\n$"."requestedStars = '$requestedStars';\r\n$"."unlisted = '$unlisted';\r\n$"."ldm = '$ldm';\r\n$"."lvlauthor = '$userName';\r\n$"."ownerAccID = '$accountID';\r\n$"."requestIP = '$reqip';\r\n?>");
 	fclose($levelstagew);
 	//ENDING
 	echo $value;
